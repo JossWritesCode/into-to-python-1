@@ -34,14 +34,11 @@ from datetime import date
 
 today = date.today()
 
-print(sys.argv)
-
-
 if len(sys.argv) == 1:
     print(calendar.month(today.year, today.month))
 
 elif len(sys.argv) == 2:
     print(calendar.month(today.year, int(sys.argv[1])))
 
-elif len(sys.argv) == 3:
-    print(calendar.month(int(sys.argv[2], sys.argv[1]))
+else:
+    print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
