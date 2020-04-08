@@ -34,13 +34,14 @@ from datetime import date
 
 today = date.today()
 
+print(sys.argv)
 
-def get_calendar(arg1=0, arg2=0):
-    if not arg1:
-        if not arg2:
-            return calendar.month(today.year, today.month
 
-    if not arg2:
-      return calendar.month(arg1, today.year)
+if len(sys.argv) == 1:
+    print(calendar.month(today.year, today.month))
 
-    return calendar.month(arg1, arg2)
+elif len(sys.argv) == 2:
+    print(calendar.month(today.year, int(sys.argv[1])))
+
+elif len(sys.argv) == 3:
+    print(calendar.month(int(sys.argv[2], sys.argv[1]))
